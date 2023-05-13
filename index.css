@@ -1,0 +1,80 @@
+/* Global */
+* {
+  margin: 0;
+  font-family: Arial, Helvetica;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 1px 8px #ddd;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+object {
+  height: 77.6vh;
+  width: 60vh;
+}
+
+#nav-title {
+  font-size: 1.5em;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+header ul {
+  margin-right: 25px;
+}
+
+header a {
+  color: darkslategray;
+  transition: all 0.3s ease 0s;
+}
+
+header a:hover {
+  color: blue;
+}
+
+/* Main */
+
+#cv {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  background-image: url("background image.jpg");
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  height: 150vh;
+  margin-top: 30px;
+}
+
+.text {
+  padding: 40px 30px;
+}
+
+.abstract {
+  display: none;
+  font-family: Georgia;
+}
+
+.title:hover + .abstract, .abstract:hover {
+  display: block;
+  padding: 20px;
+}
