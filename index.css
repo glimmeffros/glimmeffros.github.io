@@ -21,12 +21,6 @@ header {
   width: 100%;
 }
 
-iframe {
-  border: none;
-  height: 66vh;
-  width: 51vh;
-}
-
 #nav-title {
   font-size: 1.5em;
 }
@@ -46,8 +40,10 @@ header a {
   transition: all 0.3s ease 0s;
 }
 
-header a:hover {
-  color: blue;
+@media(any-hover:hover) {
+  header a:hover {
+    color: blue;
+  }
 }
 
 /* Main */
@@ -55,6 +51,12 @@ header a:hover {
 #cv {
   display: flex;
   justify-content: center;
+}
+
+iframe {
+  border: none;
+  height: 55vh;
+  width: 42.5vh;
 }
 
 .main {
