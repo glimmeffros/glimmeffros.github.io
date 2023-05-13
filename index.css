@@ -2,6 +2,7 @@
 * {
   margin: 0;
   font-family: Arial, Helvetica;
+  font-size: 1.75vw;
 }
 
 a {
@@ -55,8 +56,8 @@ header a {
 
 iframe {
   border: none;
-  height: 55vh;
-  width: 42.5vh;
+  height: 55vmin;
+  width: 42.5vmin;
 }
 
 .main {
