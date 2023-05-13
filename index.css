@@ -69,12 +69,15 @@ header a:hover {
   padding: 40px 30px;
 }
 
+
 .abstract {
   display: none;
   font-family: Georgia;
 }
 
-.title:hover + .abstract, .abstract:hover {
-  display: block;
-  padding: 20px;
+@media (hover:hover) {
+  .title:hover + .abstract, .abstract:hover {
+    display: block;
+    padding: 20px;
+  }
 }
