@@ -20,11 +20,6 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  font-size: max(1.5vh,2vw);
-}
-
-h1 {
-  font-size: 1.6em;
 }
 
 #nav-title {
@@ -70,9 +65,9 @@ iframe {
   background-position: center;
   background-repeat: repeat-y;
   background-size: cover;
-  height: 150vh;
+  height: 1000vh;
   margin-top: 30px;
-  font-size: max(1.5vh,2vw);
+  font-size: max(1.125em,1.75vw);
 }
 
 .text {
