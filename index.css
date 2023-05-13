@@ -65,8 +65,11 @@ iframe {
   width: 68vmin;
 }
 
-.text {
+.main {
   margin-top: 30px;
+}
+
+.text {
   padding: 40px 30px;
 }
 
