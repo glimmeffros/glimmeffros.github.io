@@ -8,6 +8,11 @@ a {
   text-decoration: none;
 }
 
+html { 
+  background-image: url("background image.jpg"); 
+  background-size: cover;
+}
+
 /* Header */
 header {
   background-color: lightblue;
@@ -60,17 +65,8 @@ iframe {
   width: 68vmin;
 }
 
-.main {
-  background-image: url("background image.jpg");
-  background-position: center;
-  background-repeat: repeat-y;
-  background-size: cover;
-  height: 1000vh;
-  margin-top: 30px;
-  font-size: max(1.125em,1.75vw);
-}
-
 .text {
+  margin-top: 30px;
   padding: 40px 30px;
 }
 
