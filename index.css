@@ -75,7 +75,7 @@ header a:hover {
   font-family: Georgia;
 }
 
-@media (pointer: fine) {
+@media (hover: hover) {
   .title:hover + .abstract, .abstract:hover {
     display: block;
     padding: 20px;
