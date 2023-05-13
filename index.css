@@ -21,7 +21,8 @@ header {
   width: 100%;
 }
 
-object {
+iframe {
+  border: none;
   height: 77.6vh;
   width: 60vh;
 }
