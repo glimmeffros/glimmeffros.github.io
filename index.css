@@ -2,7 +2,6 @@
 * {
   margin: 0;
   font-family: Arial, Helvetica;
-  font-size: 2vw;
 }
 
 a {
@@ -20,6 +19,11 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  font-size: max(1.5vh,2vw);
+}
+
+h1 {
+  font-size: max(1.575vh,2.1vw);
 }
 
 #nav-title {
@@ -67,12 +71,12 @@ iframe {
   background-size: cover;
   height: 150vh;
   margin-top: 30px;
+  font-size: max(1.5vh,2vw);
 }
 
 .text {
   padding: 40px 30px;
 }
-
 
 .abstract {
   display: none;
