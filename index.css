@@ -23,7 +23,7 @@ header {
 }
 
 h1 {
-  font-size: max(1.575vh,2.1vw);
+  font-size: 1.6em;
 }
 
 #nav-title {
