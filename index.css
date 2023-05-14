@@ -72,6 +72,10 @@ iframe {
   padding: 40px 30px;
 }
 
+.text li {
+  font-size-adjust: inherit;
+}
+
 .abstract {
   display: none;
 }
