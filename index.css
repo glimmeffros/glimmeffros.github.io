@@ -73,7 +73,7 @@ iframe {
 }
 
 .text li {
-  font-size-adjust: inherit;
+  line-height: initial;
 }
 
 .abstract {
