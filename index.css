@@ -15,7 +15,7 @@ html {
 
 /* Header */
 header {
-  background-color: lightblue;
+  background-image: lightblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,8 +62,8 @@ header a {
 
 iframe {
   border: none;
-  height: 88vmin;
-  width: 68vmin;
+  height: 77vmin;
+  width: 59.5vmin;
 }
 
 .main {
