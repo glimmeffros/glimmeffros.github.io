@@ -15,7 +15,7 @@ html {
 
 /* Header */
 header {
-  background-image: lightblue;
+  background-color: lightblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
