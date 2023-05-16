@@ -1,0 +1,94 @@
+/* Global */
+* {
+  margin: 0;
+  font-family: Arial, Helvetica;
+}
+
+a {
+  text-decoration: none;
+}
+
+html { 
+  background-image: url("background image.jpg"); 
+  background-size: cover;
+}
+
+/* Header */
+header {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 1px 8px #ddd;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#nav-title {
+  font-size: 1.5em;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+header ul {
+  margin-right: 25px;
+}
+
+header a {
+  color: darkslategray;
+  transition: all 0.3s ease 0s;
+}
+
+@media(any-hover:hover) {
+  header a:hover {
+    color: blue;
+  }
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Main */
+
+#cv {
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  border: none;
+  height: 88vmin;
+  width: 68vmin;
+}
+
+#home, #publications, #recent, #seminars, #unpublished {
+  padding-top: 50px;
+}
+
+.text {
+  padding: 20px 30px;
+}
+
+.abstract {
+  display: none;
+}
+
+@media (any-hover: hover) {
+  .title:hover + .abstract, .abstract:hover {
+    display: block;
+    padding: 20px;
+  }
+}
