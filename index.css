@@ -66,6 +66,7 @@ header a {
 #cv {
   display: flex;
   justify-content: center;
+  padding-top: 20px;
 }
 
 iframe {
@@ -75,11 +76,11 @@ iframe {
 }
 
 #home, #publications, #recent, #seminars, #unpublished {
-  padding-top: 50px;
+  padding: 65px 20px;
 }
 
 .text {
-  padding: 20px 30px;
+  padding: 15px 0;
 }
 
 .abstract {
