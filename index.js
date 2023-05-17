@@ -3,7 +3,7 @@ let menuBar = document.querySelector("#nav-bar");
 menuBar.addEventListener("click", function(e) {
   e.preventDefault();
 
-  let underlined = document.querySelector(".active");
+  let underlined = document.querySelector("ul .active");
   if (underlined) {
     underlined.classList.remove("active");
   }
