@@ -28,6 +28,10 @@ header {
   width: 100%;
 }
 
+#nav-bar .active {
+  text-decoration: underline;
+}
+
 #nav-title {
   font-size: 1.5em;
 }
@@ -53,6 +57,8 @@ header a {
   }
 }
 
+/* Main */
+
 .page {
   display: none;
 }
@@ -60,8 +66,6 @@ header a {
 .page.active {
   display: block;
 }
-
-/* Main */
 
 #cv {
   display: flex;
