@@ -28,7 +28,7 @@ header {
   width: 100%;
 }
 
-#nav-bar .active {
+#nav-bar .active, #nav-title .active {
   text-decoration: underline;
 }
 
