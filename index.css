@@ -59,15 +59,6 @@ header a {
 
 /* Main */
 
-.page {
-  display: none;
-}
-
-.page.active {
-  display: block;
-  padding: 65px 20px;
-}
-
 #cv {
   display: flex;
   justify-content: center;
@@ -80,6 +71,16 @@ iframe {
   width: calc(68vmin + 80px);
 }
 
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+  padding: 65px 20px;
+}
+
+/* Citations */
 .abstract {
   display: none;
 }
