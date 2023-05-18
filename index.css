@@ -67,8 +67,8 @@ header a {
 
 iframe {
   border: none;
-  height: calc(100vh - 180px);
-  width: calc(5px + 17 * (100vh - 180px) / 22);
+  height: calc(100vh - 200px);
+  width: calc(5px + 17 * (100vh - 200px) / 22);
 }
 
 .page {
