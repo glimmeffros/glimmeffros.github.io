@@ -19,8 +19,5 @@ function menuListener(e) {
   }
 }
 
-let menuBar = document.querySelector("#nav-bar");
-let menuTitle = document.querySelector("#nav-title");
-
-menuBar.addEventListener("click", menuListener);
-menuTitle.addEventListener("click", menuListener);
+document.querySelector("#nav-bar").addEventListener("click", menuListener);
+document.querySelector("#nav-title").addEventListener("click", menuListener);
