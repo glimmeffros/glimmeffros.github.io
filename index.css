@@ -38,7 +38,7 @@ header {
 
 header li {
   list-style: none;
-  display: inline-block;
+  display: inline;
   padding: 0 20px;
 }
 
