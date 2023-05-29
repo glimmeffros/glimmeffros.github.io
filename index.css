@@ -92,6 +92,7 @@ iframe {
     border-right: 0;
     border-style: solid;
     border-width: 0.5px;
+    box-shadow: 0px 5px 30px darkslategray;
     display: block;
     margin-left: 30px;
     margin-top: 0.5em;
