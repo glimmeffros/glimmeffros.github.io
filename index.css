@@ -29,7 +29,7 @@ header {
 }
 
 #nav-bar .active, #nav-title .active {
-  text-decoration: underline;
+  color: black;
 }
 
 #nav-title {
@@ -44,17 +44,6 @@ header li {
 
 header ul {
   margin-right: 25px;
-}
-
-header a {
-  color: darkslategray;
-  transition: all 0.3s ease 0s;
-}
-
-@media(any-hover:hover) {
-  header a:hover {
-    color: blue;
-  }
 }
 
 /* Main */
@@ -82,32 +71,40 @@ iframe {
 
 /* Citations */
 .abstract {
-  display: none;
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0.5px;
+  box-shadow: 0px 5px 30px darkslategray;
+  margin-left: 30px;
+  margin-top: 0.5em;
+  padding: 10px;
+  position: absolute;
+  transition-delay: 0.5s;
+  visibility: hidden;
+  width: 80vw;
 }
 
-@media (any-hover: hover) {
-  .title:hover ~ .abstract {
-    background-color: white;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 0.5px;
-    box-shadow: 0px 5px 30px darkslategray;
-    display: block;
-    margin-left: 30px;
-    margin-top: 0.5em;
-    padding: 10px;
-    position: absolute;
-    width: 80vw;
+.abstract:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 10px;
+  width: 0;
+  border-bottom: 10px solid white;
+  border-left: inherit;
+  border-right: 10px solid transparent;
+  box-shadow: inherit;
+}
+
+@media (any-hover:hover) {
+  a:not(.active):hover {
+    text-decoration: underline;
   }
-  .title:hover ~ .abstract:before {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 10px;
-    width: 0;
-    border-bottom: 10px solid white;
-    border-left: inherit;
-    border-right: 10px solid transparent;
-    box-shadow: inherit;
+  a.active:hover {
+    cursor: default;
+  }
+  .title:hover ~ .abstract {
+    visibility: visible;
   }
 }
