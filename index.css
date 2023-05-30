@@ -52,16 +52,20 @@ header a {
 
 /* Main */
 
+iframe {
+  border: none;
+  height: min(100vh - 165px, calc(22 * (min(calc(100vw - 40px), 820px) - 20px) / 17 + 20px));
+  width: min(calc(100vw - 40px), 820px);
+}
+
 #cv {
   display: flex;
   justify-content: center;
   padding-top: 20px;
 }
 
-iframe {
-  border: none;
-  height: min(100vh - 165px, calc(22 * (min(calc(100vw - 40px), 820px) - 20px) / 17 + 20px));
-  width: min(calc(100vw - 40px), 820px);
+.abstract, .title {
+  line-height: 125%;
 }
 
 .page {
@@ -111,4 +115,12 @@ iframe {
   .title:hover ~ .abstract {
     visibility: visible;
   }
+}
+
+sup {
+  line-height: 0;
+}
+
+sub {
+  line-height: 0;
 }
