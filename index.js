@@ -1,5 +1,5 @@
 function menuListener(e) {
-  e.preventDefault();
+  /* e.preventDefault(); */
 
   let underlined = document.querySelector(".active");
   if (underlined) {
