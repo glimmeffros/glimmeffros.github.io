@@ -28,11 +28,16 @@ header {
   width: 100%;
 }
 
-#nav-bar .active, #nav-title .active {
+#nav-bar .active {
   color: black;
 }
 
 #nav-title {
+  font-size: 1.5em;
+}
+
+#nave-title .active {
+  color: black;
   font-size: 1.5em;
 }
 
