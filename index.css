@@ -36,9 +36,8 @@ header {
   font-size: 1.5em;
 }
 
-#nave-title .active {
+#nav-title .active {
   color: black;
-  font-size: 1.5em;
 }
 
 header li {
