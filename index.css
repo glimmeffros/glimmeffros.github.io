@@ -9,7 +9,7 @@ a {
 }
 
 html { 
-  background-image: url("background image.jpg"); 
+  background-image: url("background_image.jpg"); 
   background-size: cover;
 }
 
@@ -22,7 +22,7 @@ header {
   padding: 10px 20px;
   box-shadow: 0 1px 8px #ddd;
   overflow: auto;
-  position: fixed;
+  position: sticky;
   top: 0;
   white-space: nowrap;
   width: 100%;
@@ -78,47 +78,39 @@ iframe {
 
 .page.active {
   display: block;
-  padding: 65px 20px;
+  padding: 20px;
 }
 
-/* Citations */
-.abstract {
-  background-color: white;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 0.5px;
-  box-shadow: 0px 5px 30px darkslategray;
-  margin-left: 30px;
-  margin-top: 0.5em;
-  padding: 10px;
-  position: absolute;
-  transition-delay: 0.5s;
-  visibility: hidden;
-  width: 80vw;
+/* Citations & Abstracts */
+li {
+  margin-bottom: 1em; /* Gives breathing room between papers */
 }
 
-.abstract:before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 10px;
-  width: 0;
-  border-bottom: 10px solid white;
-  border-left: inherit;
-  border-right: 10px solid transparent;
-  box-shadow: inherit;
+details {
+  margin-top: 5px;
 }
 
-@media (any-hover:hover) {
-  a:not(.active):hover {
-    text-decoration: underline;
-  }
-  a.active:hover {
-    cursor: default;
-  }
-  .title:hover ~ .abstract {
-    visibility: visible;
-  }
+summary {
+  cursor: pointer;
+  color: #555;
+  font-size: 0.9em;
+  font-weight: bold;
+  user-select: none;
+}
+
+summary:hover {
+  color: black;
+}
+
+.abstract-text {
+  background-color: #f9f9fa;
+  border-left: 3px solid lightblue;
+  padding: 12px 15px;
+  margin-top: 8px;
+  font-size: 0.95em;
+  line-height: 140%;
+  color: #222;
+  border-radius: 0 4px 4px 0;
 }
 
 sup {
