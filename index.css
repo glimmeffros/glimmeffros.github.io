@@ -15,13 +15,14 @@ html {
 
 /* Header */
 header {
-  background-color: lightblue;
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  backdrop-filter: blur(8px); /* Blurs the marble behind it */
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Softer shadow */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  box-shadow: 0 1px 8px #ddd;
-  overflow: auto;
   position: sticky;
   top: 0;
   white-space: nowrap;
@@ -29,30 +30,35 @@ header {
   z-index: 1000;
 }
 
-#nav-bar .active {
-  color: black;
-}
-
 #nav-title {
   font-size: 1.5em;
-}
-
-#nav-title .active {
-  color: black;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
 header li {
   list-style: none;
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 header ul {
   margin-right: 25px;
 }
 
+/* Menu Links */
 header a {
-  color: purple;
+  color: #555555; /* Sophisticated dark gray */
+  font-weight: bold;
+  transition: all 0.2s ease-in-out; /* Makes the hover effect smooth */
+}
+
+/* Active and Hover States to make them POP */
+header a:hover, 
+header a.active {
+  color: #0056b3; /* Sharp royal blue */
+  text-shadow: 0px 0px 8px rgba(0, 86, 179, 0.25); /* Subtle glowing pop */
+  cursor: pointer;
 }
 
 /* Main */
@@ -83,10 +89,6 @@ iframe {
 }
 
 /* Citations & Abstracts */
-li {
-  margin-bottom: 1em;
-}
-
 .abstract, .abstract-text, .title {
   line-height: 125%;
 }
