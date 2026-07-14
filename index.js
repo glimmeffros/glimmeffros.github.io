@@ -13,11 +13,18 @@ function updatePage() {
 
 // Function to generate the paper lists
 function renderPapers() {
+  // 1. SAFEGUARD: Check if papers.js actually loaded successfully
+  if (typeof paperData === 'undefined') {
+    console.error("Error: paperData is missing! papers.js failed to load.");
+    return;
+  }
+
   const categories = ["publications", "recent", "seminars", "unpublished"];
   
   categories.forEach(cat => {
     const listElement = document.getElementById(`list-${cat}`);
-    // Check if the HTML list and the data both exist
+    
+    // 2. Check if the HTML list and the data both exist
     if (!listElement || !paperData[cat]) return; 
     
     paperData[cat].forEach(paper => {
