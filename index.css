@@ -13,12 +13,14 @@ html {
   background-size: cover;
 }
 
-/* Header */
+/* Header - Polished Glass / Silver */
 header {
-	background-color: rgba(230, 240, 250, 0.75); /* A translucent, icy blue-gray */
-  backdrop-filter: blur(8px); /* Blurs the marble behind it */
-  -webkit-backdrop-filter: blur(8px); /* For Safari */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  /* Creates a 3D glassy/metallic reflection using pure code */
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 45%, #cecece 50%, #f6f6f6 100%);
+  
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #999;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +35,6 @@ header {
 #nav-title {
   font-size: 1.5em;
   font-weight: bold;
-  letter-spacing: 0.5px;
 }
 
 header li {
@@ -48,17 +49,15 @@ header ul {
 
 /* Menu Links */
 header a {
-  color: #555555; /* Sophisticated dark gray */
+  color: #333; 
   font-weight: bold;
-  transition: all 0.2s ease-in-out; /* Makes the hover effect smooth */
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8); /* Etched metal text effect */
+  transition: color 0.2s;
 }
 
-/* Active and Hover States to make them POP */
 header a:hover, 
 header a.active {
-  color: #0056b3; /* Sharp royal blue */
-  text-shadow: 0px 0px 8px rgba(0, 86, 179, 0.25); /* Subtle glowing pop */
-  cursor: pointer;
+  color: #6a1b9a; /* Deep, rich purple (a nod to your original color!) */
 }
 
 /* Main */
