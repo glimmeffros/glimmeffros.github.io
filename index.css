@@ -26,6 +26,7 @@ header {
   top: 0;
   white-space: nowrap;
   width: 100%;
+  z-index: 1000;
 }
 
 #nav-bar .active {
@@ -83,40 +84,96 @@ iframe {
 
 /* Citations & Abstracts */
 li {
-  margin-bottom: 1em; /* Gives breathing room between papers */
+  margin-bottom: 1em;
 }
 
-details {
-  margin-top: 5px;
+.abstract, .abstract-text, .title {
+  line-height: 125%;
 }
 
-summary {
-  cursor: pointer;
-  color: #555;
-  font-size: 0.9em;
-  font-weight: bold;
-  user-select: none;
+/* =========================================
+   DESKTOP VIEW (Hover Tooltips)
+   Applies to devices with a mouse
+   ========================================= */
+@media (any-hover: hover) {
+  .mobile-only {
+    display: none;
+  }
+  
+  a:not(.active):hover {
+    text-decoration: underline;
+  }
+  
+  a.active:hover {
+    cursor: default;
+  }
+
+  /* Your original tooltip CSS */
+  .abstract.desktop-only {
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0.5px;
+    box-shadow: 0px 5px 30px darkslategray;
+    margin-left: 30px;
+    margin-top: 0.5em;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    transition-delay: 0.5s;
+    visibility: hidden;
+    width: 80vw;
+  }
+
+  .abstract.desktop-only:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 10px;
+    width: 0;
+    border-bottom: 10px solid white;
+    border-left: inherit;
+    border-right: 10px solid transparent;
+    box-shadow: inherit;
+  }
+  
+  .title:hover ~ .abstract.desktop-only {
+    visibility: visible;
+  }
 }
 
-summary:hover {
-  color: black;
+/* =========================================
+   MOBILE VIEW (Clickable Dropdowns)
+   Applies to touch screens
+   ========================================= */
+@media (any-hover: none) {
+  .desktop-only {
+    display: none;
+  }
+  
+  details {
+    margin-top: 5px;
+  }
+
+  summary {
+    cursor: pointer;
+    color: #555;
+    font-size: 0.9em;
+    font-weight: bold;
+    user-select: none;
+  }
+
+  .abstract-text {
+    background-color: #f9f9fa;
+    border-left: 3px solid lightblue;
+    padding: 12px 15px;
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #222;
+    border-radius: 0 4px 4px 0;
+  }
 }
 
-.abstract-text {
-  background-color: #f9f9fa;
-  border-left: 3px solid lightblue;
-  padding: 12px 15px;
-  margin-top: 8px;
-  font-size: 0.95em;
-  line-height: 140%;
-  color: #222;
-  border-radius: 0 4px 4px 0;
-}
-
-sup {
-  line-height: 0;
-}
-
-sub {
+sup, sub {
   line-height: 0;
 }

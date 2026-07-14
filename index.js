@@ -13,7 +13,6 @@ function updatePage() {
 
 // Function to generate the paper lists
 function renderPapers() {
-  // 1. SAFEGUARD: Check if papers.js actually loaded successfully
   if (typeof paperData === 'undefined') {
     console.error("Error: paperData is missing! papers.js failed to load.");
     return;
@@ -23,19 +22,27 @@ function renderPapers() {
   
   categories.forEach(cat => {
     const listElement = document.getElementById(`list-${cat}`);
-    
-    // 2. Check if the HTML list and the data both exist
     if (!listElement || !paperData[cat]) return; 
     
-    paperData[cat].forEach(paper => {
+    // Explicitly tell the browser the starting number for this specific list
+    listElement.start = paperData[cat].length;
+    
+    paperData[cat].forEach((paper, index) => {
       const li = document.createElement('li');
       
-      // If there is an abstract, wrap it in a dropdown. If not, omit it.
+      // Force the exact descending number on the <li> so the browser doesn't get confused
+      li.value = paperData[cat].length - index;
+      
+      // Generate BOTH the desktop thought-bubble and the mobile dropdown
       const abstractHTML = paper.abstract 
-        ? `<details>
+        ? `
+           <div class="abstract desktop-only">${paper.abstract}</div>
+           
+           <details class="mobile-only">
              <summary>Abstract</summary>
              <div class="abstract-text">${paper.abstract}</div>
-           </details>`
+           </details>
+          `
         : '';
 
       li.innerHTML = `
