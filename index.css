@@ -76,41 +76,38 @@ header a.active {
 /* Main */
 
 #cv {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
+  display: block;
+  text-align: center;
+  margin-top: 35px; /* Creates the distinct blank line you requested! */
   width: 100%;
   
-  /* This acts as a picture frame. Anything pushed outside of it gets cropped! */
-  overflow: hidden; 
+  /* Traps Safari's mobile PDF scrolling inside the box */
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
 }
 
 iframe {
   border: none;
   background-color: white; 
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.2); /* Gives the CV a nice physical paper shadow */
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2); 
   
   /* DESKTOP SIZING:
-     Forces the paper into a perfect 8.5x11 aspect ratio, and dynamically calculates 
-     the maximum width allowed before the bottom of the page falls off the screen. */
+     Uses dynamic height instead of aspect-ratio to prevent Safari's 
+     internal toolbars from breaking the page boundaries. */
   width: 100%; 
-  max-width: min(100%, calc((100vh - 120px) * (8.5 / 11)));
-  aspect-ratio: 8.5 / 11;
+  height: calc(100vh - 160px); 
+  max-width: calc((100vh - 160px) * (8.5 / 11));
 }
 
 /* MOBILE SIZING */
 @media (max-width: 820px) {
   iframe {
-    /* 8.5 / 6.25 = 1.36. This forces the text width to match the phone width. */
-    width: 136%; 
-    max-width: 136%; /* Overrides the desktop limit */
+    /* Guarantees 100% horizontal text fit without risky margins */
+    width: 100%; 
+    max-width: 100%; 
     
-    /* 1.125 margin / 8.5 total width = 13.235%. 
-       13.235% of our 136% scale = 18%. This perfectly crops the left margin! */
-    margin-left: -18%; 
-    
-    /* Optional: Crops the top 1-inch LaTeX margin so the title sits at the top of the screen */
-    margin-top: -10%; 
+    /* We don't worry about vertical fit on mobile, just horizontal */
+    height: 75vh; 
   }
 }
 
