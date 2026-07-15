@@ -30,19 +30,12 @@ function renderPapers() {
     paperData[cat].forEach((paper, index) => {
       const li = document.createElement('li');
       
-      // Force the exact descending number on the <li> so the browser doesn't get confused
+      // Force the exact descending number on the <li>
       li.value = paperData[cat].length - index;
       
-      // Generate BOTH the desktop thought-bubble and the mobile dropdown
+      // Back to the original, clean HTML structure!
       const abstractHTML = paper.abstract 
-        ? `
-           <div class="abstract desktop-only">${paper.abstract}</div>
-           
-           <details class="mobile-only">
-             <summary>Abstract</summary>
-             <div class="abstract-text">${paper.abstract}</div>
-           </details>
-          `
+        ? `<div class="abstract">${paper.abstract}</div>`
         : '';
 
       li.innerHTML = `
@@ -64,3 +57,32 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Run when the user hits the back button or clicks a nav link
 window.addEventListener('hashchange', updatePage);
+
+// ==========================================
+// MOBILE TOOLTIP LOGIC (Tap once to read, tap twice to open)
+// ==========================================
+document.addEventListener('click', function(e) {
+  // 1. Only intercept clicks if the user is on a touch device
+  if (!window.matchMedia("(any-hover: none)").matches) return;
+
+  // 2. If the user taps INSIDE the abstract box (to highlight text, etc.), do nothing
+  if (e.target.closest('.abstract')) return;
+
+  const titleLink = e.target.closest('.title');
+
+  if (titleLink) {
+    const isShowing = titleLink.classList.contains('show-tooltip');
+
+    if (!isShowing) {
+      // FIRST TAP: Prevent navigation, hide any other open tooltips, and show this one.
+      e.preventDefault(); 
+      document.querySelectorAll('.show-tooltip').forEach(el => el.classList.remove('show-tooltip'));
+      titleLink.classList.add('show-tooltip');
+    } 
+    // SECOND TAP: 'isShowing' is true, so we do nothing and let the browser go to the PDF!
+    
+  } else {
+    // If the user taps blank space on the page, close all open tooltips
+    document.querySelectorAll('.show-tooltip').forEach(el => el.classList.remove('show-tooltip'));
+  }
+});

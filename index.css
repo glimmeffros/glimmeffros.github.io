@@ -88,17 +88,48 @@ iframe {
 }
 
 /* Citations & Abstracts */
-.abstract, .abstract-text, .title {
+li {
+  margin-bottom: 1em; /* Delete this line if you want the original, tight single-spacing back! */
+}
+
+.abstract, .title {
   line-height: 125%;
 }
 
+/* Base tooltip styles (Shared by Desktop and Mobile) */
+.abstract {
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0.5px;
+  box-shadow: 0px 5px 30px darkslategray;
+  margin-left: 30px;
+  margin-top: 0.5em;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+  width: 80vw;
+  visibility: hidden;
+}
+
+.abstract:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 10px;
+  width: 0;
+  border-bottom: 10px solid white;
+  border-left: inherit;
+  border-right: 10px solid transparent;
+  box-shadow: inherit;
+}
+
 /* =========================================
-   DESKTOP VIEW (Hover Tooltips)
-   Applies to devices with a mouse
+   DESKTOP VIEW (Hover)
    ========================================= */
 @media (any-hover: hover) {
-  .mobile-only {
-    display: none;
+  .abstract {
+    transition-delay: 0.5s;
   }
   
   a:not(.active):hover {
@@ -108,70 +139,27 @@ iframe {
   a.active:hover {
     cursor: default;
   }
-
-  /* Your original tooltip CSS */
-  .abstract.desktop-only {
-    background-color: white;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 0.5px;
-    box-shadow: 0px 5px 30px darkslategray;
-    margin-left: 30px;
-    margin-top: 0.5em;
-    padding: 10px;
-    position: absolute;
-    z-index: 100;
-    transition-delay: 0.5s;
-    visibility: hidden;
-    width: 80vw;
-  }
-
-  .abstract.desktop-only:before {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 10px;
-    width: 0;
-    border-bottom: 10px solid white;
-    border-left: inherit;
-    border-right: 10px solid transparent;
-    box-shadow: inherit;
-  }
   
-  .title:hover ~ .abstract.desktop-only {
+  .title:hover ~ .abstract {
     visibility: visible;
   }
 }
 
 /* =========================================
-   MOBILE VIEW (Clickable Dropdowns)
-   Applies to touch screens
+   MOBILE VIEW (Tap)
    ========================================= */
 @media (any-hover: none) {
-  .desktop-only {
-    display: none;
+  .abstract {
+    /* Tooltip appears instantly when tapped on mobile, so it feels responsive */
+    transition-delay: 0s; 
+    /* Pulls it slightly to the left so it doesn't overflow small phone screens */
+    margin-left: 15px; 
+    max-width: 85vw;
   }
   
-  details {
-    margin-top: 5px;
-  }
-
-  summary {
-    cursor: pointer;
-    color: #555;
-    font-size: 0.9em;
-    font-weight: bold;
-    user-select: none;
-  }
-
-  .abstract-text {
-    background-color: #f9f9fa;
-    border-left: 3px solid lightblue;
-    padding: 12px 15px;
-    margin-top: 8px;
-    font-size: 0.95em;
-    color: #222;
-    border-radius: 0 4px 4px 0;
+  /* The class we add via JavaScript when a user taps the title */
+  .title.show-tooltip ~ .abstract {
+    visibility: visible;
   }
 }
 
