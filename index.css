@@ -35,28 +35,38 @@ header {
   font-size: 1.5em;
   font-weight: bold;
   white-space: nowrap;
-  margin-right: 20px; /* Gives a little space before the scrollable links */
+  margin-right: 20px;
+  line-height: 1; /* Normalizes the height */
+  display: flex;
+  align-items: center;
 }
 
 /* This allows ONLY the menu to scroll left/right, keeping your name anchored */
 nav {
   overflow-x: auto;
-  scrollbar-width: none; /* Hides scrollbar on Firefox */
-  -ms-overflow-style: none; /* Hides scrollbar on IE/Edge */
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  display: flex;
+  align-items: center; /* Forces vertical centering */
 }
+
 nav::-webkit-scrollbar {
-  display: none; /* Hides scrollbar on Chrome/Safari/iOS */
+  display: none; 
+  width: 0px; /* Destroys the invisible scrollbar pushing the text up */
+  height: 0px;
 }
 
 header ul {
   display: flex;
-  align-items: center; /* This forces perfect vertical centering! */
+  align-items: center;
+  margin-bottom: 0; 
 }
 
 header li {
   list-style: none;
   white-space: nowrap;
   padding: 0 15px;
+  line-height: 1; /* Normalizes the height */
 }
 
 /* Menu Links */
@@ -74,18 +84,26 @@ header a.active {
 
 /* Main */
 
-iframe {
-  border: none;
-  width: 100%; /* Automatically shrinks to perfectly fit a phone screen */
-  max-width: 820px; /* Stops growing on desktop */
-  height: 75vh;
-  background-color: white; /* Shows a clean white box while the PDF loads */
-}
-
 #cv {
   display: flex;
   justify-content: center;
   padding-top: 20px;
+  width: 100%;
+  
+  /* If Safari refuses to shrink the PDF, this contains the damage 
+     so only the CV scrolls, NOT the whole page! */
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+}
+
+iframe {
+  border: none;
+  /* The Safari iPhone Hack: */
+  width: 1px; 
+  min-width: 100%; 
+  max-width: 820px;
+  height: 75vh;
+  background-color: white; 
 }
 
 .abstract, .title {
