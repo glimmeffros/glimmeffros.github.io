@@ -260,6 +260,12 @@ const paperData = {
     }
   ],
   "recent": [
+  	{
+      "title": "D-scrambled Cantor sets.",
+      "url": "recent/threescrambled.pdf",
+      "metadata": "Draft.",
+      "abstract": "For all d ≥ 3, we provide an example of a homeomorphism of Cantor space that has an uncountable d-scrambled set but no d-scrambled Cantor set."
+    },
     {
       "title": "Periodic permutations and the successor.",
       "url": "recent/successor.pdf",
