@@ -260,11 +260,17 @@ const paperData = {
     }
   ],
   "recent": [
+    {
+      "title": "The uniform 𝔾<sub>0</sub> dichotomy.",
+      "url": "recent/uniformgzero.pdf",
+      "metadata": "Draft.",
+      "abstract": "We give a classical proof of a generalization of the 𝔾<sub>0</sub> dichotomy to uniformly analytic families of digraphs indexed by elements of κ<sup>ℕ</sup> and obtain Kanovei’s generalization of the 𝔾<sub>0</sub> dichotomy to κ-Souslin digraphs as a corollary."
+    },
   	{
       "title": "n-Scrambled Cantor sets.",
       "url": "recent/threescrambled.pdf",
       "metadata": "Draft.",
-      "abstract": "For all d ≥ 3, we provide an example of a homeomorphism of Cantor space that has an uncountable d-scrambled set but no d-scrambled Cantor set."
+      "abstract": "For all n ≥ 3, we provide an example of a homeomorphism of Cantor space that has an uncountable n-scrambled set but no n-scrambled Cantor set."
     },
     {
       "title": "Periodic permutations and the successor.",
