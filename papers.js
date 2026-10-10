@@ -261,10 +261,10 @@ const paperData = {
   ],
   "recent": [
     {
-      "title": "The uniform 𝔾<sub>0</sub> dichotomy.",
+      "title": "Two nonseparable generalizations of the 𝔾<sub>0</sub> dichotomy.",
       "url": "recent/uniformgzero.pdf",
       "metadata": "Draft.",
-      "abstract": "We give a classical proof of a generalization of the 𝔾<sub>0</sub> dichotomy to uniformly analytic families of digraphs indexed by elements of κ<sup>ℕ</sup> and obtain Kanovei’s generalization of the 𝔾<sub>0</sub> dichotomy to κ-Souslin digraphs as a corollary."
+      "abstract": "We give a classical proof of both the generalization of the uniform 𝔾<sub>0</sub> dichotomy to sequences of digraphs indexed by κ<sup>ℕ</sup> and the generalization of the 𝔾<sub>0</sub> dichotomy to κ-Souslin digraphs."
     },
   	{
       "title": "n-Scrambled Cantor sets.",
