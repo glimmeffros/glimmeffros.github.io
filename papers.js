@@ -264,7 +264,7 @@ const paperData = {
       "title": "Two generalizations of the 𝔾<sub>0</sub> dichotomy.",
       "url": "recent/uniformgzero.pdf",
       "metadata": "Draft.",
-      "abstact": "We give classical proofs of the generalizations of the 𝔾<sub>0</sub> dichotomy to uniformly analytic sequences of digraphs indexed by κ<sup>ℕ</sup> and to κ-Souslin digraphs."
+      "abstact": "We give classical proofs of the generalizations of the 𝔾<sub>0</sub> dichotomy to κ-Souslin digraphs and uniformly analytic sequences of digraphs indexed by κ<sup>ℕ</sup>."
     },
   	{
       "title": "n-Scrambled Cantor sets.",
